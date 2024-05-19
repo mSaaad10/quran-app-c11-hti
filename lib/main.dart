@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:quran_app/ui/home/home_screen.dart';
 import 'package:quran_app/ui/home/chapter_details_screen/chapter_details_screen.dart';
+import 'package:quran_app/ui/home/home_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MyApppp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApppp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
