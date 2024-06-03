@@ -131,21 +131,16 @@ class QuranTabWidget extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 64),
               width: double.infinity,
               height: 2,
-              color: Theme.of(context).colorScheme.primary),
+              color: Theme.of(context).dividerColor),
           Container(
               padding: EdgeInsets.symmetric(vertical: 8),
-              child: Text(
-                'Chapter Name',
-                style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              )),
+              child: Text('Chapter Name',
+                  style: Theme.of(context).textTheme.titleMedium)),
           Container(
               margin: EdgeInsets.symmetric(horizontal: 64),
               width: double.infinity,
               height: 2,
-              color: Theme.of(context).colorScheme.primary),
+              color: Theme.of(context).dividerColor),
           Expanded(
             flex: 3,
             child: ListView.separated(
@@ -157,7 +152,7 @@ class QuranTabWidget extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 64),
                     width: double.infinity,
                     height: 2,
-                    color: Theme.of(context).colorScheme.primary),
+                    color: Theme.of(context).dividerColor),
                 itemCount: suraNames.length),
           )
         ],

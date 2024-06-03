@@ -22,22 +22,27 @@ class _ChapterDetailsScreenState extends State<ChapterDetailsScreen> {
       decoration: BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage('assets/images/main_background.png'))),
+              image: AssetImage(ThemeMode == ThemeMode.light
+                  ? 'assets/images/main_background.png'
+                  : 'assets/images/main_bg_dark.png'))),
       child: Scaffold(
         appBar: AppBar(
           title: Text(args.chapterTitle),
         ),
         body: verses.isEmpty
             ? Center(child: CircularProgressIndicator())
-            : ListView.separated(
-                itemBuilder: (context, index) =>
-                    VerseWidget(verse: verses[index]),
-                separatorBuilder: (context, index) => Container(
-                      color: Theme.of(context).primaryColor,
-                      width: double.infinity,
-                      height: 2,
-                    ),
-                itemCount: verses.length),
+            : Card(
+                color: Theme.of(context).cardTheme.color,
+                child: ListView.separated(
+                    itemBuilder: (context, index) =>
+                        VerseWidget(verse: verses[index]),
+                    separatorBuilder: (context, index) => Container(
+                          color: Theme.of(context).dividerColor,
+                          width: double.infinity,
+                          height: 2,
+                        ),
+                    itemCount: verses.length),
+              ),
       ),
     );
   }

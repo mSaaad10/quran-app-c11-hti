@@ -29,7 +29,9 @@ class _HomeScreenState extends State<HomeScreen> {
       decoration: BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage('assets/images/main_background.png'))),
+              image: AssetImage(ThemeMode == ThemeMode.light
+                  ? 'assets/images/main_background.png'
+                  : 'assets/images/main_bg_dark.png'))),
       child: Scaffold(
         appBar: AppBar(
           title: Text('Islami'),
@@ -43,23 +45,23 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Color(0xFFB7935F),
           items: [
             BottomNavigationBarItem(
-                backgroundColor: Color(0xFFB7935F),
+                backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(AssetImage('assets/images/quran_ic.png')),
                 label: 'Quran'),
             BottomNavigationBarItem(
-                backgroundColor: Color(0xFFB7935F),
+                backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(AssetImage('assets/images/ahadeth_ic.png')),
                 label: 'Ahadeth'),
             BottomNavigationBarItem(
-                backgroundColor: Color(0xFFB7935F),
+                backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(AssetImage('assets/images/tasbeh_ic.png')),
                 label: 'Tasbeh'),
             BottomNavigationBarItem(
-                backgroundColor: Color(0xFFB7935F),
+                backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(AssetImage('assets/images/radio_ic.png')),
                 label: 'Radio'),
             BottomNavigationBarItem(
-                backgroundColor: Color(0xFFB7935F),
+                backgroundColor: Theme.of(context).primaryColor,
                 icon: Icon(Icons.settings),
                 label: 'Settings'),
           ],

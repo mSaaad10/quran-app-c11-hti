@@ -14,7 +14,7 @@ class VerseWidget extends StatelessWidget {
         verse,
         textAlign: TextAlign.center,
         textDirection: TextDirection.rtl,
-        style: TextStyle(fontSize: 26, color: Colors.black),
+        style: Theme.of(context).textTheme.displaySmall,
       ),
     );
   }
